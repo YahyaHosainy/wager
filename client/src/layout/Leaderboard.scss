@@ -1,0 +1,11 @@
+@import "../theme/colors.scss";
+@import "../theme/mixins.scss";
+
+.Leaderboard__container {
+  display: flex;
+  flex-direction: column;
+
+  @include respond-above(medium) {
+    flex-direction: row;
+  }
+}

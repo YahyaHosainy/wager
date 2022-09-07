@@ -1,0 +1,54 @@
+@import "../theme/mixins.scss";
+
+.Articles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Articles .ExternalHeader {
+  width: 100%;
+}
+
+.Articles__container {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+  max-width: 50em;
+  width: 95%;
+}
+
+.Articles__title {
+  font-size: 72px;
+}
+
+.Articles__article-container {
+  padding: 30px;
+}
+
+.Articles__article-preview {
+  display: flex;
+  flex-direction: column;
+
+  @include respond-above(medium) {
+    flex-direction: row;
+  }
+}
+
+.Articles__article-title {
+  font-size: 32px;
+}
+
+.Articles__article-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Articles__article-date {
+  margin-top: 10px;
+}
+
+.Articles__article-text {
+  text-align: left;
+  width: 90%
+}

@@ -1,0 +1,36 @@
+{
+  "data": [
+    {
+      "id": 0,
+      "line": "-6",
+      "matchup": "49ers vs Packers",
+      "favorite": "49ers",
+      "underdog": "Packers",
+      "location": "Levi's Stadium"
+    },
+    {
+      "id": 1,
+      "line": "-6",
+      "matchup": "Warriors vs Celtics",
+      "favorite": "Warriors",
+      "underdog": "Celtics",
+      "location": "Stadium2"
+    },
+    {
+      "id": 2,
+      "line": "-9",
+      "matchup": "Chiefs vs Titans",
+      "favorite": "Chiefs",
+      "underdog": "Titans",
+      "location": "Levi's Stadium"
+    },
+    {
+      "id": 3,
+      "line": "-2 Clippers",
+      "matchup": "Cllppers vs Lakers",
+      "favorite": "Clippers",
+      "underdog": "Lakers",
+      "location": "Levi's Stadium"
+    }
+  ]
+}

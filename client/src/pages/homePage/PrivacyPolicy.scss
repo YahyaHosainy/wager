@@ -1,0 +1,25 @@
+.PrivacyPolicy {
+    font-family: forma-djr-display, "Helvetica Neue", sans-serif;
+    margin: 10px 10px 10px 20px;
+    text-align: justify;
+
+    p {
+        font-size: 18px;
+    }
+    
+    h1,h2, h3 {
+        margin: 25px 0px;
+    }
+    
+    h3 {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    ul > li {
+        list-style-type: disc;
+        list-style-position: inside; 
+        text-align: justify;
+    }
+}
+

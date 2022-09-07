@@ -1,0 +1,112 @@
+
+@import "../theme/mixins.scss";
+
+.Notifications {
+  height: 50px;
+  margin-right: $space-medium;
+  position: relative;
+  width: 50px;
+}
+
+.Notifications__drawer {
+  position: fixed;
+  background: white;
+  color: black;
+  width: 270px;
+  height: fit-content;
+  top: 71px;
+  right: 0;
+  font-size: 12px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  margin-top: 12px;
+  max-height: calc(100vh - 250px);
+  overflow: hidden auto;
+  transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+
+  @include respond-above(small) {
+    position: absolute;
+    top: 100%;
+    left: -170px;
+  }
+}
+
+.Notifications__notification {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  border-bottom: 1px solid rgb(221, 221, 221);
+  min-height: 70px;
+  padding: 8px 12px;
+  text-align: left;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+.Notifications__notification-text {
+  margin-bottom: 7px;
+}
+
+.Notifications__notification-date {
+  font-size: 12px;
+}
+.Notifications__count {
+  font-family: $leckreli-one;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+.Notifications__count-container {
+  align-items: center;
+  background: $color-red;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  filter: drop-shadow(0px 4px 4px #B76F6F);
+  font-size: 11px;
+  position: absolute;
+  height: 24px;
+  justify-content: center;
+  top: 10px;
+  right: 0px;
+  width: 24px;
+
+
+  @include respond-above(xsmall) {
+    top: -3px;
+    right: -8px;
+  }
+
+  @include respond-above(small) {
+    height: 24px;
+    top: -10px;
+    right: -8px;
+    width: 24px;
+  }
+}
+
+.Notifications__icon {
+  display: flex;
+  align-items: center;
+}
+
+.Notification__bell{
+  display: none;
+
+  @include respond-above(xsmall) {
+    display: block;
+    cursor: pointer;
+    transform: scale(.8);
+  }
+  @include respond-above(small) {
+    transform: scale(1);
+  }
+}
+
+.Notifications__notification--pointer {
+  cursor: pointer;
+}
+
+.Notifications__notification--unseen {
+    background-color: #fffadd;
+}

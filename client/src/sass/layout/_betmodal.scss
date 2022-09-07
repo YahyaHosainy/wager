@@ -1,0 +1,193 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+}
+
+.modal-main {
+  position: fixed;
+  background: white;
+  width: 100%;
+  min-width: 325px;
+  max-width: 414px;
+  height: 100%;
+  min-height: 550px;
+  max-height: 736px;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.BetModal__label {
+  display: flex;
+  flex: row;
+  font-weight: bold;
+}
+
+.BetModal__input {
+  margin-left: 10px;
+  font-weight: 400;
+}
+
+.BetModal__Contents {
+  position: relative;
+  width: 90%;
+}
+
+.BetModal__closeButton {
+  position: absolute;
+  cursor: pointer;
+  right: 0px;
+  top: 0px;
+  height: 30px;
+  width: 30px;
+}
+
+.SelectTeam {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.SelectTeam__Menu {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.SelectTeam__back {
+
+  width: 15px;
+  height: 15px;
+}
+
+.SelectTeam__Back-button {
+  width: 15px;
+  height: 15px;
+  margin-left: 14px;
+}
+.SelectTeam__Title {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.SelectTeam__Teams {
+  border: 1px solid #f3f3f0;
+  margin-top: 20px;
+  width: 90%;
+  height: 250px;
+  display: flex;
+  flex-direction: row;
+}
+
+.SelectTeam__Team {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.SelectTeam__Team-logo-image {
+  margin-top: 29px;
+  height: 50px;
+}
+
+.SelectTeam__Team-title {
+  margin-top: 8px;
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.SelectTeam__Team-subtitle {
+  margin-top: 4px;
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.SelectTeam__Team-explanation {
+  width: 66%;
+  height: 24px;
+  margin-top: 11.5px;
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.SelectTeam__Team-checkmark {
+  width: 28px;
+  height: 28px;
+  margin-top: 21px;
+}
+
+.SelectTeam__Explanation {
+  width: 70%;
+  height: 120px;
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.SelectTeam__Next {
+  position: absolute;
+  transform: translate(-50%, 0);
+  bottom: 150px;
+  left: 50%;
+  width: 80%;
+  height: 43px;
+  background: #fdd063;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  align-self: flex-start;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+
+.modal__control-container {
+  margin-top: 30%;
+  left: 50%;
+  transform: translate(0, -50%);
+  height: 50px;
+  width: 305px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

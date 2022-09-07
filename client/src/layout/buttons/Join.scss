@@ -1,0 +1,22 @@
+@import "../../theme/variables.scss";
+
+.Join__container {
+  height: auto;
+  width: 150px;
+}
+
+.Join__button {
+  background-color: royalblue;
+  color: $color-white-secondary;
+  padding-top: 9px;
+  padding-bottom: 7px;
+  width: 150px;
+  height: 40px;
+  margin: 0;
+  padding: 12px 16px 10px;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+}

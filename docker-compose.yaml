@@ -1,0 +1,14 @@
+version: '3'
+services:
+  client:
+    container_name: wager-client
+    build: ./client
+    image: vikram-wager-client:latest
+    ports:
+      - "3000:3000"
+  server:
+    container_name: wager-server
+    build: ./server
+    image: vikram-wager-server:latest
+    ports:
+      - "3001:3001"

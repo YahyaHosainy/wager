@@ -1,0 +1,60 @@
+@import "../theme/colors.scss";
+@import "../theme/mixins.scss";
+
+.PayPage__container {
+  margin-top: 79px;
+  padding: 0 1rem;
+  font-family: "Open Sans", Arial, sans-serif;
+  min-height: 100vh;
+  background-color: #fafafa;
+  color: #262626;
+  padding-bottom: 3rem;
+  @include respond-above(small) {
+    padding: 0 2rem;
+  }
+}
+
+.Back__btn {
+  padding-top: 20px;
+  text-align: left;
+  a {
+    text-transform: uppercase;
+    color: #616161;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    vertical-align: middle;
+
+    img {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 10px;
+      width: 20px;
+    }
+  }
+}
+
+.PayPage__content {
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  margin-top: 50px;
+}
+
+.PayPage__pay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 45%;
+  @include respond-below(medium) {
+    width: 100%;
+  }
+}
+
+.PayPalButtons__container {
+  max-width: 315px;
+}
+
+.PayPage__paypal-container {
+  margin-top: 23px;
+}

@@ -1,0 +1,25 @@
+@mixin typography($font-weight: $font-weight-medium) {
+  font-family: $font-primary;
+  font-weight: $font-weight;
+  font-style: $font-style-primary;
+}
+
+@mixin respond-above($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $above-breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @media (min-width: $above-breakpoint-value) {
+      @content;
+    }
+  }
+}
+
+@mixin respond-below($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $below-breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @media (max-width: $below-breakpoint-value) {
+      @content;
+    }
+  }
+}

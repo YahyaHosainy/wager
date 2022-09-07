@@ -1,0 +1,39 @@
+.Article__button-back {
+  margin-left: 10px;
+}
+
+.Article__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Article__hero-banner {
+  margin-top: 20px;
+}
+
+.Article__title {
+  font-size: 72px;
+  margin-top: 30px;
+}
+
+.Article__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.Article__text-container {
+  max-width: 1200px;
+  width: 90%;
+}
+
+.Article__text {
+  text-align: left;
+  font-size: 32px;
+}
+
+.Article__second-banner {
+  margin-top: 10px
+}

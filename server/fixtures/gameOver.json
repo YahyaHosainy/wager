@@ -1,0 +1,49 @@
+[{
+  "event_id": "75243676f7575a2e275b7897a42b4f22",
+  "sport_id": 4,
+  "event_date": "2020-03-06T01:00:00Z",
+  "score": {
+    "event_id": "75243676f7575a2e275b7897a42b4f22",
+    "event_status": "STATUS_SCHEDULED",
+    "score_away": 0,
+    "score_home": 0,
+    "winner_away": 1,
+    "winner_home": 0,
+    "score_away_by_period": [],
+    "score_home_by_period": [],
+    "venue_name": "",
+    "venue_location": "",
+    "game_clock": 0,
+    "display_clock": "0:00",
+    "game_period": 0,
+    "broadcast": "",
+    "event_status_detail": ""
+  },
+  "teams_normalized": [
+    {
+      "team_id": 5,
+      "name": "Houston",
+      "mascot": "Rockets",
+      "ranking": 0,
+      "record": "40-24",
+      "is_away": true,
+      "is_home": false
+    },
+    {
+      "team_id": 8,
+      "name": "Los Angeles",
+      "mascot": "Clippers",
+      "ranking": 0,
+      "record": "40-24",
+      "is_away": false,
+      "is_home": true
+    }
+  ],
+  "schedule": {
+    "season_type": "Regular Season",
+    "season_year": 2020,
+    "event_name": "LA at Houston - 2020-03-06",
+    "attendance": "18055"
+  },
+  "line_periods": {}
+}]

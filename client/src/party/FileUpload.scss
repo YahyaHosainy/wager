@@ -1,0 +1,121 @@
+@import "../theme/mixins.scss";
+
+.FileUploadContainer {
+  position: relative;
+  margin: 25px 0 15px;
+  border: 2px dotted lightgray;
+  padding: 35px 20px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+
+.FileUploadContainer__form-field {
+  font-size: 18px;
+  display: block;
+  width: 100%;
+  border: none;
+  text-transform: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  &:focus {
+    outline: none;
+  }
+}
+
+.FileUploadContainer__input-label {
+  top: -21px;
+  font-size: 13px;
+  color: black;
+  left: 0;
+  position: absolute;
+}
+
+.FileUploadContainer__drop-text {
+  display: none;
+  font-weight: bold;
+  letter-spacing: 2.2px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+  @include respond-above(small) {
+    display: flex;
+  }
+}
+
+
+.FilePreviewContainer {
+  margin-bottom: 35px;
+  span {
+    font-size: 14px;
+  }
+}
+
+.FilePreviewContainer__preview-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  flex-direction: column;
+
+  @include respond-above(small) {
+    flex-direction: row;
+  }
+}
+
+.FilePreviewContainer__metadata {
+  flex-direction: column;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 5px;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  background-color: rgba(5, 5, 5, 0.3);
+  div {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.FilePreviewContainer__trash {
+  align-self: flex-end;
+  cursor: pointer;
+  background: transparent;
+  font-size: 18px;
+
+  &:hover {
+    transform: scale(1.4);
+  }
+}
+
+.FilePreviewContainer__preview {
+  padding: 0.25rem;
+  width: 30%;
+  height: 140px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  &:hover {
+    opacity: 0.55;
+  }
+  & > div:first-of-type {
+    height: 100%;
+    position: relative;
+  }
+}
+
+.FilePreviewContainer__image {
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+}

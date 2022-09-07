@@ -1,0 +1,28 @@
+.StoryVideo__video {
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
+
+.StoryVideo__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+
+}
+
+.StoryVideo__controls {
+  position: absolute;
+  top: 68px;
+  left: 76px;
+  color: white;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.StoryVideo__control {
+  height: 25px;
+  width: 25px;
+}

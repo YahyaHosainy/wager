@@ -1,0 +1,93 @@
+@import "../theme/mixins.scss";
+
+* {
+  font-family: forma-djr-display, sans-serif;
+}
+
+.Header {
+  top: 0;
+  position: fixed;
+  z-index: 500;
+  height: 79px;
+  display: flex;
+  justify-content: center;
+  background-color: $color-white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  @include respond-above(small) {
+    width: 100vw;
+  }
+}
+
+.Header__content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.Header__menu-container {
+  height: 28px;
+  width: 30%;
+  justify-content: flex-start;
+}
+
+.Header__logo {
+  height: 100%;
+  margin-left: auto;
+  margin-right: 12px;
+  max-width: 400px;
+  width: 75%;
+
+  @include respond-above(small) {
+    height: auto;
+    margin: 0 auto;
+    width: 40%;
+  }
+}
+
+.Header__avatar-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 45%;
+
+  @include respond-above(small) {
+    width: 30%
+  }
+}
+
+.Header__balance-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+}
+
+.Header__balance-header {
+  font-size: 9px;
+  line-height: 11px;
+  align-self: flex-start;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.Header__balance-text {
+  align-self: flex-start;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000000;
+}
+
+.Header__avatar {
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 1em;
+}

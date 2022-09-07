@@ -1,0 +1,371 @@
+@import "../theme/mixins.scss";
+
+.party-section {
+  display: flex;
+  padding: 0 $space-small;
+  flex-direction: column;
+  max-width: 816px;
+  width: 100%;
+
+  @include respond-above(small) {
+      margin: 0 auto;
+    }
+
+  &.no-display {
+      display: none;
+  }
+
+  .partycard-container {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      column-gap: 5px;
+      margin-right: 0;
+      margin-left: 0;
+  }
+
+  .party-col {
+      width:100%;
+  }
+
+
+  .margin-auto {
+      margin-left:5px;
+      margin-right:5px;
+      width: 100%;
+  }
+
+
+  .party-section__following, .party-section__discover{
+      margin-top: 20px;
+  }
+
+  h2 {
+      text-align: left;
+  }
+
+  .startParty {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+      div {
+          margin: 0 25px;
+          a {
+              background: #F2C94C;
+              color: #000000;
+              text-decoration: none;
+              font-weight: bold;
+              padding: 15px 50px;
+              display: block;
+              border-radius: 10px;
+              letter-spacing: 1px;
+              font-size: 12px;
+          }
+      }
+  }
+}
+
+.Party__container {
+  @include page-container();
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 79px;
+  h3 {
+      font-size: 20px;
+      font-weight: bold;
+  }
+  .text-center {
+      text-align: center;
+  }
+  .justify-center {
+      display: flex;
+      justify-content: center;
+  }
+}
+
+  .Party__contents {
+      width: 100%;
+      small {
+          display: block;
+          text-align: left;
+          color: #F00;
+      }
+      .party__date {
+          margin: 10px 0 15px;
+          text-align: left;
+      }
+      .Party__disabled {
+          pointer-events: none;
+          cursor: default;
+          background: #ffedc0 !important;
+          border: 2px solid #ffedc0 !important;
+      }
+      h5 {
+          font-size: 16px;
+      }
+      .Party__addIcon {
+          margin: 25px 0 0;
+      }
+      .Party__addSection {
+          padding: 20px 10px;
+          border: 1px solid rgba(0,0,0,.03);
+          box-sizing: border-box;
+          box-shadow: 0 3px 27px rgb(196 205 213 / 35%);
+          border-radius: 5px;
+      }
+      .Party__form {
+          input {
+              display: block;
+              width: 100%;
+              padding: 15px;
+              border-radius: 15px;
+              margin: 20px 0;
+              border: 1px solid #C4C4C4;
+              margin-bottom: 0;
+              &:focus {
+                  outline: none;
+                  border-color: #FAB131;
+              }
+          }
+      }
+      .Party__uploadTitle {
+          text-align: left;
+          margin-top: 20px;
+          span {
+              color: #B3B3B3;
+              font-weight: normal;
+          }
+      }
+      .Party__uploadContent {
+          display: flex;
+          margin: 20px 0;
+          img.Party__imageSelected, video {
+              max-width: 166px;
+              height: 100%;
+              object-fit: cover;
+              border-radius: 20px;
+              @include respond-below(small) {
+                  max-width: 135px;
+              }
+          }
+          div {
+              flex: 1;
+              border: 2px solid #B3B3B3;
+              border-radius: 20px;
+              height: 175px;
+              &:first-child {
+                  margin-right: 5px;
+              }
+              &:last-child {
+                  margin-left: 5px;
+              }
+              label {
+                  cursor: pointer;
+                  width: 100%;
+                  height: 100%;
+                  align-items: center;
+                  justify-content: center;
+                  display: flex;
+              }
+              input {
+                  display: none;
+              }
+              p {
+                  font-size: 12px;
+                  margin-top: 10px;
+                  color: #C4C4C4;
+                  letter-spacing: 1px;
+              }
+          }
+          a {
+              display: inline-block;
+              background: #F8D57E;
+              padding: 8px 20px 5px;
+              color: #000000;
+              text-decoration: none;
+              font-weight: bold;
+              border-radius: 20px;
+              border: 2px solid #F8D57E;
+              &:hover {
+                  background: transparent;
+              }
+          }
+      }
+      .Party__changeGame {
+          font-size: 12px;
+          a {
+              text-decoration: none;
+              color: #000000;
+              font-weight: bold;
+              display: flex;
+              align-items: center;
+              justify-content: flex-end;
+              img {
+                  width: 12px;
+                  margin-left: 5px;
+              }
+          }
+      }
+      .Party__SelectTeam {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          margin-top: 20px;
+          img {
+              width: 50px;
+          }
+          .Party__gameLineSec {
+              p {
+                  font-size: 12px;
+                  font-weight: bold;
+                  letter-spacing: 1px;
+              }
+          }
+          .Party__gameLine {
+              background: #47c07b;
+              color: #ffffff;
+              padding: 8px 8px 5px;
+              border-radius: 5px;
+              letter-spacing: 1px;
+              p {
+                  color: #ffffff;
+                  font-size: 12px;
+              }
+          }
+          .mt5 {
+              margin-top: 5px;
+          }
+          .Party__homeOrAway {
+              text-transform: capitalize;
+              font-size: 12px;
+              font-weight: bold;
+          }
+          .Party__gameName {
+              font-weight: bold;
+          }
+          .Party__Team-checkmark {
+              width: 20px;
+              margin-top: 20px;
+          }
+          .Party__gameSingle {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              &:hover {
+                  cursor: pointer;
+              }
+          }
+      }
+      .Party__formContainer {
+          display: flex;
+          align-items: flex-start;
+          .Party__form {
+              flex: 1;
+              &:first-child {
+                  margin-right: 5px;
+              }
+              &:last-child {
+                  margin-left: 5px;
+              }
+          }
+      }
+    }
+.EditParty__current-stories {
+  margin-top: 36px;
+  width: 100%;
+  h4 {
+    margin-bottom: 12px;
+  }
+
+  .EditParty__story {
+    display: grid;
+    align-items: center;
+    justify-items: flex-start;
+    border-bottom: 1px solid #ececec;
+    padding: 8px 0;
+    width: 100%;
+    grid-template-columns: 10% 30% 70%;
+    grid-gap: 8px;
+    img, video {
+      width: 100%;
+      border-radius: 20px;
+      margin-right: 20px;
+      margin-bottom: 10px;
+    }
+    span {
+      margin-right: 16px;
+    }
+    .Story__delete {
+      width: 30px;
+    }
+  }
+}
+
+.Party__modal {
+  .Modal__content {
+    overflow: auto;
+    width: 30%;
+    @include respond-below(medium) {
+        width: 70%;
+    }
+    @include respond-below(small) {
+        width: 98%;
+        min-width: auto;
+    }
+    .Dashboard__Game-container {
+        grid-template-columns: 0;
+        display: block;
+        justify-content: center;
+        .DashboardCard__container {
+            min-width: 100%;
+        }
+    }
+    .Party__modalScroll {
+        width: 100%;
+    }
+  }
+}
+.Party__buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 12px;
+}
+
+.EditParty__header {
+  align-items: center;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 10% 90%;
+  margin-top: 16px;
+}
+
+.EditParty__action-buttons {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.Party__linkInput {
+  margin: 20px 0;
+  width: 100%;
+  input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid #FAB131;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+.Party__linkTitle {
+  text-align: left;
+  margin-top: 50px;
+}
+.Party__linkEdit {
+    margin-top: 30px;
+}
+.EditParty__story-content {
+  text-align: left;
+}

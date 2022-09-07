@@ -1,0 +1,36 @@
+.Menu {
+  position: absolute;
+  z-index: 110;
+  height: 35px;
+}
+
+.Menu__Container {
+  left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 31px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 1px 0;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.Menu__Line {
+  width: 2rem;
+  height: 0.25rem;
+  background: #404040;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+
+.Menu__Line:last-child {
+  width: 1rem;
+}

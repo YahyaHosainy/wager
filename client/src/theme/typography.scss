@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Leckerli+One&display=swap');
+// Imports forma-djr-display
+@import url('https://use.typekit.net/tks8cqw.css');
+
+$leckreli-one: 'Leckreli One', cursive;
+$abel: 'Abel', sans-serif;
+$forma-djr: 'forma-djr-display', 'Helvetica Neue', Helvetica, sans-serif;
+
+@mixin lightDJR {
+  font-family: forma-djr-display, sans-serif;
+  font-weight: $font-weight-light;
+  font-style: normal;
+}
+
+@mixin typography {
+  font-family: forma-djr-display, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@mixin boldDJR {
+  font-family: forma-djr-display, sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}

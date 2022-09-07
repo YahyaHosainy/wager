@@ -1,0 +1,497 @@
+@import "../theme/mixins.scss";
+
+.GameDetail__container {
+  @include page-container();
+}
+
+.GameDetail__header {
+  position: relative;
+  width: 350px;
+  text-align: center;
+  padding: 20px;
+}
+
+.GameDetail__header-teams {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.GameDetail__union {
+  cursor: pointer;
+  height: 20px;
+  position: absolute;
+  left: -25px;
+  @media screen and (max-width: 499px) {
+    left: 30px;
+  }
+}
+
+.GameDetail__teams-info {
+  align-items: center;
+  display: grid;
+  height: auto;
+  grid-template-columns: 33% 33% 33%;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.GameDetail__teams-team {
+  flex: 1;
+}
+.GameDetail__teams-team .DashboardCard__bg {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+.GameDetail__teams-name {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  margin-top: 15px;
+}
+
+.GameDetail__teams-city {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 13px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.GameDetail__teams-logo1 {
+  height: 70px;
+  border-radius: 30px;
+  margin: 0 auto;
+}
+
+.GameDetail__teams-logo2 {
+  height: 70px;
+  border-radius: 30px;
+  margin: 0 auto;
+}
+
+.GameDetail__vs {
+  font-family: $font-primary;
+  font-weight: bold;
+  font-size: 36px;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  align-self: center;
+}
+.GameDetail__vs .time_line {
+  margin-bottom: 3px;
+}
+.GameDetail__vs .DashboardCard__box-container {
+  width: 85px;
+}
+.GameDetail__vs .DashboardCard__box-container .DashboardCard__text-box {
+  font-size: 12px;
+}
+.GameDetail__vs .DashboardCard__box-container .DashboardCard__line-box {
+  font-size: 30px;
+}
+.GameDetail__vs .DashboardCard__time-container {
+  margin-top: 10px;
+}
+
+.GameDetail__details-wager {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  justify-content: space-around;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.GameDetail__details-totalBet {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.GameDetail__details-wag {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  text-align: center;
+}
+
+.GameDetail__details-amount {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+}
+
+.GameDetail__details-num {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  margin-top: 3px;
+}
+
+.GameDetail__details-button {
+  text-align: center;
+  width: 100%;
+  min-width: 200px;
+  height: 35px;
+  background: linear-gradient(0deg, #ffca36, #ffca36),
+    linear-gradient(0deg, #fdd063, #fdd063), #f2c94c;
+  border-radius: 5px;
+  cursor: pointer;
+  border-color: #fdd063;
+  font-weight: bold;
+}
+
+.GameDetail__details-friends {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  display: inline;
+  vertical-align: middle;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.GameDetail__details-div {
+  display: inline-block;
+}
+
+.GameDetail__BeatingBreakdown {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  margin: 35px 0 20px;
+}
+
+.GameDetail__BeatingBreakdown-div {
+  background: #ffffff;
+  width: 100%;
+  height: auto;
+  display: flex;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.GameDetail__BeatingBreakdown-team {
+  flex: 1;
+  padding: 30px 0;
+  &:first-child {
+    border-right: 1px solid #e1e1e1;
+  }
+}
+
+.GameDetail__BeatingBreakdown-team_div {
+  margin-bottom: 15px;
+}
+
+.GameDetail__BeatingBreakdown-team_logo {
+  height: 50px;
+  margin: 0 auto;
+}
+
+.GameDetail__BeatingBreakdown-team_team {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  margin-top: 10px;
+}
+
+.GameDetail__BeatingBreakdown-Record_div {
+  margin-bottom: 15px;
+}
+
+.GameDetail__BeatingBreakdown-Record_text {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+}
+
+.GameDetail__BeatingBreakdown-Record_record {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+}
+
+.GameDetail__BeatingBreakdown-Wager_div {
+  display: inline-block;
+}
+
+.GameDetail__BeatingBreakdown-Wager_text {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  text-align: left;
+}
+
+.GameDetail__BeatingBreakdown-Wager_res {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.GameDetail__BeatingBreakdown_link {
+  display: flex;
+  text-decoration: none;
+}
+
+.GameDetail__BeatingBreakdown-Wager_friends {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  background: #ffffff;
+  padding: 8px;
+  border-radius: 50%;
+  position: relative;
+  left: -10px;
+}
+
+.GameDetail__BeatingBreakdown-Bets_Div {
+  margin-bottom: 15px;
+}
+
+.GameDetail__BeatingBreakdown-Bets_text {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+}
+
+.GameDetail__BeatingBreakdown-Bets_bets {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.GameDetail__BeatingBreakdown-line {
+  bottom: 100px;
+  width: 200px;
+  height: 0px;
+  left: 68px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transform: rotate(90deg);
+  position: relative;
+}
+
+.GameDetail__BeatingBreakdown-Record2_div {
+  margin-bottom: 15px;
+}
+
+.GameDetail__BeatingBreakdown-Record2_text {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+}
+
+.GameDetail__BeatingBreakdown-Record2_record {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+}
+
+.GameDetail__BeatingBreakdown-Wager2_div {
+  display: inline-block;
+}
+
+.GameDetail__CommentHead {
+  overflow: hidden;
+}
+.GameDetail__CommentHead h1 {
+  float: left;
+}
+.GameDetail__CommentHead p {
+  text-align: right;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 3px;
+  float: right;
+}
+.GameDetail__CommentHead p img {
+  display: inline-block;
+  vertical-align: text-bottom;
+  margin-right: 3px;
+}
+
+.GameDetail__BeatingBreakdown-Wager2_text {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  text-align: left;
+}
+
+.GameDetail__BeatingBreakdown-Wager2_res {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.GameDetail__BeatingBreakdown-Wager2_friends {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  background: #ffffff;
+  padding: 8px;
+  border-radius: 50%;
+  position: relative;
+  left: -10px;
+}
+
+.GameDetail__BeatingBreakdown-Bets2_Div {
+  margin-bottom: 15px;
+}
+
+.GameDetail__BeatingBreakdown-Bets2_text {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+}
+
+.GameDetail__BeatingBreakdown-Bets2_bets {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.GameDetail__LiveCommentContainer {
+  width: 100%;
+}
+
+.GameDetail__LiveCommentHeader {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  z-index: -1;
+  text-align: left;
+}
+
+.GameDetail__LiveCommentsContainer {
+  overflow: auto;
+  height: 300px;
+  padding: 0 10px;
+  margin-top: 20px;
+}
+
+.GameDetail__LiveComment-Avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 20px;
+  vertical-align: top;
+}
+
+.GameDetail__LiveComment-CommentWrapper {
+  display: inline-block;
+  width: 85%;
+}
+@media screen and (max-width: 499px) {
+  .GameDetail__LiveComment-CommentWrapper {
+    width: 80%;
+  }
+}
+.GameDetail__LiveComment-CommentWrapper .GameDetail__LiveComment-Comment {
+  font-weight: bold;
+}
+.GameDetail__LiveComment-CommentWrapper .GameDetail__LiveComment-UserName {
+  font-size: 11px;
+  a {
+    color: #000000;
+    text-decoration: none;
+  }
+}
+
+.GameDetail__LiveComment-CommentContainer {
+  text-align: left;
+  margin-bottom: 20px;
+}
+.GameDetail__LiveComment-CommentContainer:last-child {
+  margin-bottom: 10px;
+}
+
+.GameDetail__LiveComment-Form {
+  position: relative;
+  margin-top: 10px;
+}
+.GameDetail__LiveComment-Form .GameDetail__LiveComment-User_avatar {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 10px;
+  top: 7px;
+  z-index: 1;
+  border-radius: 50%;
+}
+.GameDetail__LiveComment-Form .GameDetail__LiveComment-Input {
+  position: relative;
+  width: 100%;
+  height: 45px;
+  padding-left: 50px;
+  padding-right: 80px;
+  border-radius: 20px;
+  border: 1px solid #e0e0e0;
+  font-size: 14px;
+}
+.GameDetail__LiveComment-Form .GameDetail__LiveComment-Input:focus {
+  outline: none;
+}
+.GameDetail__LiveComment-Form .GameDetail__LiveComment-Submit {
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  background: #ffffff;
+}
+.GameDetail__LiveComment_emoji {
+  position: absolute;
+  right: 10px;
+  bottom: 45px;
+  z-index: 1;
+}
+.GameDetail__LiveComment-emojiactive {
+  display: block;
+}
+.GameDetail__LiveComment-emojinactive {
+  display: none;
+}
+
+.GameDetails__Wagers {
+  display: flex;
+  justify-content: center;
+}

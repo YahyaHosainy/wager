@@ -1,0 +1,167 @@
+@import "../theme/mixins.scss";
+
+.BetHistory__container {
+  margin-top: 1.5rem;
+  .notAvailable {
+    width: auto;
+  }
+}
+
+.LedgerHistory__container {
+  height: 300px;
+  overflow-y: auto;
+}
+
+.BetHistory__Header {
+  text-align: left;
+  padding-left: 15px;
+  padding-bottom: 4px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+  border-bottom: 1px solid #e1e1dd;
+}
+
+.BetHistory__card {
+  background: #ffffff;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  margin: 12px 0;
+  padding: 8px 0;
+}
+
+.LedgerHistory__card {
+  margin-top: 0;
+  display: flex;
+  flex-direction: row;
+  background: #ffffff;
+  border-radius: 5px;
+  align-items: flex-end;
+  justify-content: space-between;
+  border: none;
+}
+
+.Ledger__date {
+  margin: 20px 0 10px;
+  color: #707980;
+}
+
+.BetHistory__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.LedgerHistory__title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @media screen and (max-width: 576px) {
+    justify-content: center;
+  }
+}
+
+.BetHistory__teamAvatar {
+  vertical-align: middle;
+  border-radius: 50%;
+}
+.BetHistory__teamAvatar-picture {
+  width: 40px;
+  height: 40px;
+}
+
+.BetHistory__icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: $space-small;
+}
+
+.BetHistory__teams {
+  display: flex;
+  flex-direction: column;
+}
+
+.BetHistory__wagerAmount {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+}
+
+.BetHistory__teams-home {
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: bold;
+}
+
+.BetHistory__teams-away {
+  height: 16px;
+}
+
+.BetHistory__fill {
+  width: 40px;
+  margin-left: auto;
+  margin-right: 20px;
+  @include respond-below(xsmall) {
+    display: none;
+  }
+}
+
+.BetHistory__bet {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex: 1;
+  @media screen and (max-width: 576px) {
+    margin-top: 15px;
+  }
+}
+
+.LedgerHistory__bet {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex: 1;
+  padding: 20px;
+  background: #f4f8fa;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-align: left;
+  @media screen and (max-width: 576px) {
+    border-bottom-left-radius: 20px;
+  }
+}
+
+.BetHistory__competitors {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.BetHistory_competitor {
+  width: 40px;
+  margin-left: -15px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: #e6e6e6;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+}
+
+.bet__won {
+  color: #47C07B;
+}
+
+.bet__lose {
+  color: $color-red;
+}

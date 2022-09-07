@@ -1,0 +1,121 @@
+.videosection {
+    width: 100%;
+    padding: 50px 0;
+    h2, h5 {
+        text-align: center;
+    }
+    h5 {
+        margin: 20px 0;
+    }
+}
+
+.videos {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    h4 {
+        text-align: center;
+        margin: 10px 0;
+    }
+    h6 {
+        text-align: center;
+        padding: 0 20px;
+    }
+    @media screen and (max-width: 599px) {
+        display: block;
+    }
+}
+
+.video__single {
+    width: 250px;
+    @media screen and (max-width: 599px) {
+        margin: 0 auto 20px;
+    }
+}
+
+.single__video {
+    position: relative;
+    margin: 0 50px;
+}
+
+.img-responsive {
+    width: 150px;
+    height: 150px;
+}
+
+.play {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.video-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: visible;
+    opacity: 1;
+    .overlay:target {
+        visibility: hidden;
+        opacity: 0;
+        display:none
+    }
+    .popup {
+        position: relative;
+        margin: 70px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 5px;
+        width: 50%;
+        transition: all 5s ease-in-out;
+        @media screen and (max-width: 499px) {
+            width: 99%;
+        }
+        @media (min-width: 500px) and (max-width: 599px) {
+            width: 90%;
+        }
+    }
+    .popup .close {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        transition: all 200ms;
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #000000;
+        background: #ffb200;
+        padding: 0px 5px;
+        border-radius: 50%;
+        margin: 0;
+        height: 25px;
+        width: 25px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .popup .content {
+        min-height: 30%;
+        overflow: auto;
+    }
+}
+
+.iframe {
+    @media screen and (max-width: 499px) {
+        height: auto;
+    }
+}

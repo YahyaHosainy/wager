@@ -1,0 +1,50 @@
+@import "./colors.scss";
+@import "./variables.scss";
+@import "./typography.scss";
+
+$breakpoints: (
+  xsmall: 375px,
+  small: 520px,
+  medium: 835px,
+  large: 1280px,
+);
+
+@mixin typography($font-weight: $font-weight-medium) {
+  font-family: $font-primary;
+  font-weight: $font-weight;
+  font-style: $font-style-primary;
+}
+
+@mixin respond-above($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $above-breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @media (min-width: $above-breakpoint-value) {
+      @content;
+    }
+  }
+}
+
+@mixin respond-below($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $below-breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @media (max-width: $below-breakpoint-value) {
+      @content;
+    }
+  }
+}
+
+@mixin page-container() {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 79px auto;
+  width: 100%;
+  padding: 0 16px;
+
+  @include respond-above(small) {
+    max-width: 450px;
+    padding: 0;
+  }
+}

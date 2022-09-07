@@ -1,0 +1,101 @@
+@import "../theme/mixins.scss";
+
+.ExternalHeader {
+  height: 84px;
+  background-color: $color-white-primary;
+  top: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.ExternalHeader__content {
+  max-width: 985px;
+  padding: 13px;
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.ExternalHeader__logo-container {
+  height: 66px;
+  width: 66px;
+  position: relative;
+}
+
+.ExternalHeader__blog-link {
+  color: black;
+  margin-right: 15px;
+  text-decoration: none;
+  position: relative;
+}
+
+.ExternalHeader__logo-container img {
+  height: 40px;
+  position: absolute;
+  transform: translate(0, -50%);
+  top: 50%;
+  @include respond-above(medium) {
+    height: 55px;
+  }
+}
+
+.ExternalHeader__nav-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  margin-left: auto;
+  height: 77px;
+}
+
+.ExternalHeader__signUp-container {
+  height: 77px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.ExternalHeader__logIn-container {
+  width: 85px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.social {
+    flex: 1;
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    @media (max-width: 767px) {
+      margin-right: 0;
+      justify-content: center;
+    }
+      a {
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 12px;
+        font-weight: 400;
+        text-decoration: none;
+        transition: all 0.2s;
+        &:hover {
+          color: #ffb200;
+          text-decoration: underline;
+        }
+    }
+  }
+.social__instagram {
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  margin-right: 10px;
+  @include respond-above(small) {
+    height: 25px;
+    width: 25px;
+    margin-right: 16px
+  }
+}

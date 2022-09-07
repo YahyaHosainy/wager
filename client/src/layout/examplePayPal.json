@@ -1,0 +1,51 @@
+{
+  "details": {
+    "create_time": "2020-03-16T01:54:31Z",
+    "update_time": "2020-03-16T01:54:49Z",
+    "id": "3H8026788M307200X",
+    "intent": "CAPTURE",
+    "status": "COMPLETED",
+    "payer": {
+      "email_address": "tennismaniac@sbcglobal.net",
+      "payer_id": "KXUDKWU2A6F5A",
+      "address": {
+        "country_code": "US"
+      },
+      "name": {
+        "given_name": "Kelson",
+        "surname": "Quan"
+      }
+    },
+    "purchase_units": [
+      {
+        "description": "Spread pickem tournament",
+        "reference_id": "default",
+        "amount": {
+          "value": "0.05",
+          "currency_code": "USD"
+        },
+        "payee": {
+          "email_address": "hellowagergames@gmail.com",
+          "merchant_id": "SNFDYVX6792LY"
+        },
+        "shipping": {
+          "name": { "full_name": "Kelson Quan" },
+          "merchant_id": "SNFDYVX6792LY",
+          "address": {
+            "address_line_1": "138 Mattos Court",
+            "admin_area_2": "Danville",
+            "admin_area_1": "CA",
+            "postal_code": "94526",
+            "country_code": "US"
+          }
+        }
+      }
+    ]
+  },
+
+  "data": {
+    "orderID": "3H8026788M307200X",
+    "payerID": "KXUDKWU2A6F5A",
+    "facilitatorAccessToken": "A21AAFbd85tsyOuEZDBldUOFrO-D4_5gAQgyJcYbUfDui8zjNJeSajcGBPqweufCpBerCXHjoxRjxzV4i1mXdkp05zDn1KZww"
+  }
+}

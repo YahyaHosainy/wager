@@ -1,0 +1,31 @@
+.Modal__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.Modal__open {
+  opacity: 90;
+  background: gray;
+}
+
+.Modal__closed {
+  opacity: 0;
+  display: none;
+}
+
+.Modal__content {
+  position: absolute;
+  background: white;
+  min-width: 345px;
+  width: 80%;
+  height: 70vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  padding: 36px;
+  box-shadow: 0 2px 4px 0 rgba(50, 50, 93, 0.1);
+}

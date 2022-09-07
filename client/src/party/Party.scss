@@ -1,0 +1,477 @@
+@import "../theme/mixins.scss";
+
+.Party {
+  margin: 85px auto;
+  width: 100%;
+  max-width: 500px;
+  img {
+    object-fit: cover;
+  }
+  @include respond-below(medium) {
+    width: 90%;
+  }
+}
+.Party__game {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-column-gap: $space-xlarge;
+}
+.Party__host {
+  padding: 50px 50px 20px;
+  font-weight: bold;
+}
+
+.Party__cta {
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(0deg, #F8D57E, #F8D57E), linear-gradient(0deg, #F8D57E, #F8D57E), #F8D57E;
+  border-radius: 5px;
+  cursor: pointer;
+  border-color: #F8D57E;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.Party__content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  h3 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+
+.Party__imgcont {
+  position: relative;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.Party__imgcont::after {
+  position: absolute;
+  top: -4px;
+  bottom: -4px;
+  left: -4px;
+  right: -4px;
+  content: '';
+  z-index: -1;
+  border-radius: 50%;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: profileCircleAnimation 5s ease infinite;
+
+  @keyframes profileCircleAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+
+.Party__userimg {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.Party__host-header {
+  flex: 1;
+  margin: 0 20px;
+  div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    img {
+      margin-left: 10px;
+    }
+  }
+}
+.Party__host-bio {
+  font-size: 12px;
+}
+.Party__host-stat {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.Party__host-stat-label {
+  font-size: 12px;
+}
+
+.Party__followBtn {
+  padding: 8px 20px;
+  border: 1px solid #F8D57E;
+  border-radius: 15px;
+  font-size: 9px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #000000;
+  &:hover {
+    background: #F8D57E;
+  }
+}
+.Party__statistics {
+  display: grid;
+  column-gap: 5px;
+  font-size: 12px;
+  grid-template-columns: 50% 50%;
+  justify-items: center;
+  margin-top: 20px;
+  margin-bottom: 16px;
+  width: 100%;
+
+  .Party__stat {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    font-size: 30px;
+
+    @include respond-below(medium) {
+      font-size: 18px;
+    }
+    img {
+      border-radius: 50%;
+      width: 33px;
+      height: 33px;
+      margin-right: 10px;
+    }
+  }
+  .Party__statSide {
+    display: flex;
+    align-items: center;
+    img {
+      height: 40px;
+      margin-right: 20px;
+    }
+  }
+  .Party__matched {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .Party__matchImg {
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+      a {
+        margin-left: -10px;
+        &:first-child {
+          margin-left: 0;
+        }
+        img {
+          width: 35px;
+          height: 35px;
+          border: 1px solid #ffffff;
+          border-radius: 50%;
+        }
+      }
+      p {
+        background: #cccccc;
+        padding: 8px 10px;
+        border-radius: 50%;
+        margin-left: -10px;
+        border: 1px solid #ffffff;
+        font-size: 12px;
+      }
+    }
+  }
+}
+.Party__gauge {
+  margin: 0 auto 20px;
+  width: 65%;
+
+  @include respond-below(medium) {
+    width: 100%;
+  }
+
+  .Party__background {
+    position: relative;
+    height: 75px;
+    margin-bottom: 10px;
+    background-color: #f3f3f0;
+    border-radius: 150px 150px 0 0;
+    overflow: hidden;
+    text-align: center;
+    p {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+  .Party__mask {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    left: 16px;
+    height: 80px;
+    background-color: #ffffff;
+    border-radius: 150px 150px 0 0
+  }
+  .Party__percentage {
+    position: absolute;
+    top: 75px;
+    left: -200%;
+    width: 400%;
+    height: 400%;
+    margin-left: 100px;
+    background-color: #F8D57E;
+  }
+  .Party__percentage {
+    transform: rotate(150deg);
+    transform-origin: top center;
+  }
+  .Party__value {
+    position: absolute;
+    top: 35%;
+    left: 0;
+    width: 100%;
+    font-size: 30px;
+    font-weight: 700
+  }
+}
+
+.Party__games {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-gap: 5px;
+  align-items: center;
+  margin-top: 15px;
+  width: 100%;
+  justify-items: center;
+  @include respond-below(medium) {
+    width: 100%;
+  }
+  img {
+    height: 40px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  .game__section1 {
+    position: relative;
+    &.picked {
+      border: 2px solid #47C07B;
+    }
+    border-radius: 10px;
+    padding: 10px;
+    p {
+      font-size: 12px;
+      margin-top: 5px;
+    }
+    .game__userImg {
+      background: white;
+      display: block;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      position: absolute;
+      left: -10px;
+      top: -10px;
+    }
+
+    .hideImg {
+      display:none
+    }
+
+    h2 {
+      font-size: 20px;
+    }
+  }
+  .game__section2 {
+    width: 87px;
+    align-self: flex-start;
+    div {
+      background: #47C07B;
+      padding: 10px;
+      height: 70px;
+      border-radius: 5px;
+      margin-top: 6px;
+      margin-bottom: 10px;
+      p, h1 {
+        color: #ffffff;
+      }
+    }
+    p {
+      font-size: 12px;
+      font-weight: 500;
+    }
+  }
+}
+
+.Party__last {
+  width: 100%;
+  margin: 20px 0;
+  @include respond-below(medium) {
+    width: 100%;
+  }
+}
+
+.Party__button {
+  display: flex;
+  button {
+    &:first-child {
+      margin-right: 10px;
+    }
+    &:last-child {
+      margin-left: 10px;
+    }
+  }
+}
+
+.people_grey {
+  color: #999999;
+  font-size: 12px;
+  margin: 10px 0;
+  text-align: left;
+}
+
+.Party__disclaimer {
+  font-size: 9px
+}
+
+.Party__people {
+  display: grid;
+  align-items: flex-start;
+  margin-top: 10px;
+  position: relative;
+  justify-content: space-between;
+  grid-template-columns: 50% 50%;
+  grid-gap: 10px;
+  width: 100%;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    @include respond-below(medium) {
+      display: none;
+    }
+  }
+  .people_section {
+    flex: 1;
+    .people_all {
+      display: flex;
+      align-items: center;
+      a {
+        margin-left: -10px;
+        &:first-child {
+          margin-left: 0;
+        }
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          border: 1px solid #ffffff;
+        }
+      }
+    }
+    .people_last {
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+      background: #C4C4C4;
+      padding: 6px 8px;
+      border-radius: 50%;
+      margin-left: -10px;
+      border: 1px solid #ffffff;
+    }
+    @include respond-below(medium) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.Party__pick {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 60% 40%;
+  p {
+    font-size: 12px;
+  }
+}
+
+.Party__profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.Party__comment {
+  width: 100%;
+}
+
+.Party__hostname {
+  display: inline-block;
+  font-weight: 700;
+  word-break: break-word;
+}
+
+
+.Stat {
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  box-sizing: border-box;
+  box-shadow: 0px 3px 27px rgba(196, 205, 213, 0.35);
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 12px;
+  width: 100%;
+}
+
+.Party__stat-side-team-name {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.Party__stat-side-city {
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.Party__wager-amount {
+  font-size: 30px;
+  font-weight: 700;
+
+  @include respond-below(medium) {
+    font-size: 18px;
+  }
+}
+
+.Party__side {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.Party__bet-section {
+  width:100%;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  box-sizing: border-box;
+  box-shadow: 0px 3px 27px rgba(196, 205, 213, 0.35);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.Party__totalbets {
+  p {
+    font-size: 9px;
+    margin-top: 16px;
+  }
+}
+
+.Party__host-info {
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,17 @@
+FROM node:15.7-alpine
+
+WORKDIR /app
+
+COPY yarn.lock package.json .env ./
+
+ENV NODE_ENV production
+
+ENV PORT 3001
+
+RUN yarn install --frozen-lockfile
+
+COPY . /app
+
+EXPOSE 3001
+
+CMD ["node", "index.js"]

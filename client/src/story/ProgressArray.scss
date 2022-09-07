@@ -1,0 +1,13 @@
+.ProgressArray {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  flex-wrap: row;
+  position: absolute;
+  width: 98%;
+  padding: 5px;
+  padding-top: 7px;
+  align-self: center;
+  z-index: 99;
+  filter: drop-shadow(0 1px 8px #222);
+}

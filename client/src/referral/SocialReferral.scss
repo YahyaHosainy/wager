@@ -1,0 +1,74 @@
+@import "../theme/mixins.scss";
+
+.SocialReferral {
+ max-width: 90%;
+ min-width: 300px;
+}
+
+.SocialReferral__icon {
+  width: 48px;
+  height: 48px;
+}
+.SocialReferral__modes{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+.SocialReferral__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+  width: 130px;
+  height: 40px;
+  border-radius: 5px;
+  background: linear-gradient(0deg, #ffca36, #ffca36),
+    linear-gradient(0deg, #fdd063, #fdd063), #f2c94c;
+  font-size: 16px;
+
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+
+  &:hover,
+  :active {
+    color: white;
+    background: black;
+  }
+}
+
+.SocialReferral__link {
+  width: 315px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border-width: 1px;
+  margin-right: $space-xsmall;
+
+}
+.SocialReferral__action-container {
+  display: flex;
+  margin-bottom: $space-medium;
+}
+
+
+.SocialReferral__mode {
+  margin-right: $space-large;
+}
+
+.SocialReferral__cta {
+  text-align: left;
+  font-size: 24px;
+  margin-bottom: $space-small;
+}
+
+.SocialReferral__cta-subtitle {
+  text-align: left;
+  margin-bottom: $space-large;
+}

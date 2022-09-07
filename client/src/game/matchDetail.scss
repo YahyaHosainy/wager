@@ -1,0 +1,140 @@
+.MatchDetail__header {
+  width: 450px;
+  @media screen and (max-width: 499px) {
+    width: 100%;
+  }
+}
+
+.MatchDetail__teamInfo {
+  display: flex;
+  width: 450px;
+  margin-top: 10px;
+  align-items: center;
+  @media screen and (max-width: 499px) {
+    width: 90%;
+  }
+  .Info__first,
+  .Info__second,
+  .Info__last {
+    flex: 1;
+    padding: 15px 5px;
+  }
+  .Info__first {
+    border: 2px solid #47c07b;
+    border-radius: 5px;
+    padding: 15px 5px;
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin: 0 auto;
+      @media screen and (max-width: 499px) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+  h1 {
+    margin: 10px 0;
+    @media screen and (max-width: 499px) {
+      font-size: 16px;
+    }
+  }
+  .Team__details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 30px;
+      height: 30px;
+      margin-right: 15px;
+      margin-left: 0;
+      border-radius: 0;
+      @media screen and (max-width: 499px) {
+        margin-right: 5px;
+      }
+    }
+    .Details__info {
+      text-align: left;
+      font-size: 14px;
+      p {
+        @media screen and (max-width: 499px) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .DashboardCard__text-box {
+    margin: 0;
+  }
+  .time_line {
+    margin: 0 0 5px;
+  }
+  .DashboardCard__time-container {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+  .Info__last {
+    .Images__multiple {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      flex: 1;
+      justify-content: center;
+
+      .competitors {
+        width: 40px;
+        margin-left: -15px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid white;
+        background-color: #e6e6e6;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+.Potential__winning {
+  width: 400px;
+  margin-top: 15px;
+  text-align: left;
+  @media screen and (max-width: 499px) {
+    width: 90%;
+  }
+}
+
+.MatchDetail__LiveCommentContainer {
+  width: 470px;
+  @media screen and (max-width: 499px) {
+    width: 90%;
+  }
+  .GameDetail__LiveCommentHeader {
+    font-size: 20px;
+  }
+  .GameDetail__CommentHead p {
+    margin-top: 4px;
+  }
+}
+
+.MatchDetail__vs {
+  .time_line {
+    @media screen and (max-width: 499px) {
+      font-size: 12px;
+    }
+  }
+  .DashboardCard__box-container {
+    @media screen and (max-width: 499px) {
+      width: 70px;
+    }
+  }
+  .DashboardCard__time-container {
+    @media screen and (max-width: 499px) {
+      font-size: 16px;
+    }
+  }
+}

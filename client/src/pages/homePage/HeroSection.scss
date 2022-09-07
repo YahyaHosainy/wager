@@ -1,0 +1,31 @@
+.herosection {
+  font-family: forma-djr-display, sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  color: #ffffff;
+  height: auto;
+  width: 327px;
+  margin-top: 24px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    font-size: 32px;
+    line-height: 38px;
+    width: 327px;
+    height: 76px;
+    left: 24px;
+    top: 128px;
+  }
+  &__subheader {
+    line-height: 28px;
+    font-size: 28px;
+    font-weight: 300;
+    margin-top: 12px;
+  }
+
+  &__container {
+    margin-top: 28px;
+  }
+}

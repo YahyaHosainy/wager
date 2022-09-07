@@ -1,0 +1,220 @@
+@import "../theme/mixins.scss";
+
+$full-height-regular: 300px;
+$full-height-small: 270px;
+$font-size: 16px;
+
+.partycard {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    box-sizing: border-box;
+    box-shadow: 0 3px 27px rgb(196 205 213 / 35%);
+    border-radius: 5px;
+    width: 100%;
+    height: $full-height-regular;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 15px;
+
+    @include respond-above(small) {
+        min-width: 350px;
+      }
+
+    .party-img {
+        width: 100%;
+        border-radius: 10px;
+        height: $full-height-regular - 2;
+        display: inline-block;
+    }
+
+    .party-title {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        color: black;
+        height: $full-height-regular/7;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        background-color: white;
+        background-color: rgba(248, 213, 126, 1);
+
+        .game-title {
+            text-align: center;
+            padding: 5px;
+            margin: auto;
+            height: 100%;
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 1.5em;
+            font-size: 15px;
+            padding-top: 10px;
+
+            & > span {
+                border-radius: 15%;
+                background-color:#47C07B;
+                font-weight: bolder;
+                color: white;
+                padding: 2px 4px;
+                font-style: italic;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    .party-host {
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        color: white;
+        height: $full-height-regular/3;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background-color: rgba(0,0,0,.7);
+
+        .party-host__photo {
+            width: 100px;
+            height: $full-height-regular/3;
+            object-fit: contain;
+
+            img {
+                border-radius:50%;
+                max-width: 60px;
+                min-width: 20px;
+                width: 100%;
+                max-height: 60px;
+                min-height: 20px;
+                height: 100%;
+                overflow: hidden;
+                margin: auto;
+                margin-top: 10px;
+            }
+        }
+
+        .party-host__info{
+            padding: 10px;
+
+            p {
+                color: white;
+                text-align: left;
+                margin-bottom: 2px;
+            }
+
+            p > span {
+                font-weight: lighter;
+                font-size: $font-size - 3;
+                margin-left:5px;
+            }
+
+            p.party-host__info--name {
+                font-size: $font-size;
+                font-weight: bolder;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            p.party-host__info--tagline {
+                height: 100%;
+                width: 100%;
+                max-height: 63px;
+                max-width: 243px;
+                font-size: $font-size - 4;
+                padding:1px;
+                overflow-wrap: break-word;
+                word-wrap: break-word;
+                hyphens: auto;
+                overflow: auto;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: map-get($breakpoints, "small")) {
+    .partycard {
+        height: $full-height-small;
+
+        .party-img {
+            height: $full-height-small - 2;
+        }
+
+        .party-title {
+            height: $full-height-small/7;
+
+            .game-title {
+                font-size: 9px;
+            }
+        }
+
+        .party-host {
+            height: $full-height-small/3;
+
+            .party-host__photo {
+
+                height: $full-height-small/3;
+
+                img {
+                    max-height: 30px;
+                    min-height: 20px;
+                    height: 100%;
+                }
+            }
+
+            .party-host__info{
+                p > span {
+                    font-size: $font-size - 5;
+                    margin-left:3px;
+                    display: block;
+                }
+
+                p.party-host__info--name {
+                    font-size: $font-size - 2;
+                    font-weight: bolder;
+                }
+
+                p.party-host__info--tagline {
+                    height: 100%;
+                    max-height: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .partycard {
+        height: $full-height-small;
+
+        .party-img {
+            height: $full-height-small - 2;
+        }
+
+        .party-title {
+            height: $full-height-small/7;
+
+            .game-title {
+                font-size: 8px;
+            }
+        }
+
+        .party-host {
+            height: $full-height-small/3;
+
+            .party-host__photo {
+
+                height: $full-height-small/3;
+
+                img {
+                    max-height: 30px;
+                    min-height: 20px;
+                    height: 100%;
+                }
+            }
+
+            .party-host__info{
+                p > span {
+                    font-size: $font-size - 5;
+                    margin-left:3px;
+                }
+            }
+        }
+    }
+}

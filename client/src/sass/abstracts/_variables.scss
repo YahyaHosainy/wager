@@ -1,0 +1,79 @@
+//COLORS
+// $color-yellow-primary: #FFCB4F;
+$color-yellow-secondary: #fdd063;
+$color-yellow-tertiary: #ffb200;
+
+$color-black-primary: #000000de;
+$color-black-secondary: #040409;
+
+$color-white-primary: #f3f3f0;
+$color-white-secondary: #ffffff;
+$color-white-tertiary: #f5f3f7;
+
+// $color-dark-gray: #404040;
+$color-med-gray: #5e5d5d;
+// $color-light-gray: #E5E5E5;
+
+$color-blue-primary: #3498db;
+
+$color-red: #eb5757;
+
+//FONTS
+$font-primary: forma-djr-display, sans-serif;
+
+//FONT SIZE
+$font-size-xlarge: 32px;
+$font-size-large: 28px;
+$font-size-large-med: 18px;
+$font-size-medium: 16px;
+$font-size-small: 14px;
+
+// FONT WEIGHT:
+$font-weight-heavy: 900;
+$font-weight-heavy-medium: 600;
+$font-weight-medium: 500;
+$font-weight-light: 300;
+
+// FONT STYLE
+$font-style-primary: normal;
+
+// RESPONSIVE BREAKPOINTS
+$breakpoints: (
+  xsmall: 350px,
+  small: 835px,
+  large: 1280px,
+);
+
+// $breakpoints: (
+// 	sm: 576px,
+// 	// Small devices (landscape phones, 576px and up)
+// 		md: 768px,
+// 	// Medium devices (tablets, 768px and up)
+// 		lg: 992px,
+// 	// Large devices (desktops, 992px and up)
+// 		xl: 1200px // Extra large devices (large desktops, 1200px and up),
+// );
+
+$zindexes: (
+  10: 10,
+  20: 20,
+  30: 30,
+);
+
+// Grid
+$grid-columns: 12;
+$grid-gutter: 15px;
+$grid-gutter-sm: 7px;
+
+// Spacers
+
+$spacer: 1.6rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  auto: auto,
+);

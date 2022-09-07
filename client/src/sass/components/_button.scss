@@ -1,0 +1,44 @@
+button {
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.Button__Signup {
+  @include typography($font-weight-heavy);
+  cursor: pointer;
+  border-radius: 8px;
+  text-transform: uppercase;
+  text-decoration: none;
+  align-self: center;
+  line-height: 20px;
+
+  &-yellow {
+    color: $color-white-secondary;
+    background: $color-yellow-tertiary;
+    padding: 8px 18px;
+    font-size: $font-size-large-med;
+  }
+  &-white {
+    color: $color-yellow-tertiary;
+    background: $color-white-secondary;
+    padding: 8px 11px;
+    font-size: $font-size-large;
+  }
+}
+
+.GameDetail__details-button {
+  position: relative;
+  text-align: center;
+  width: 330px;
+  height: 35px;
+  background: $color-yellow-secondary;
+  top: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  border-color: #fdd063;
+  font-weight: bold;
+}

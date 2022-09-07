@@ -1,0 +1,46 @@
+$yellow: #fdd063;
+$white: #ffffff;
+$black: #040409;
+$light-grey: #f5f3f7;
+
+.homepage {
+  overflow-x: hidden;
+
+  .full-width {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .container {
+    flex-direction: column;
+    background-color: $light-grey;
+
+		.main {
+			background: $white;
+		}
+		.hero {
+			height: 662px;
+			background: $yellow;
+		}
+		.explanation {
+			height: 2000px;
+			margin-top: 16px;
+			background: $white;
+		}
+		.friends {
+			height: 467px;
+			margin-top: 16px;
+			background: $black;
+		}
+		.summary {
+			height: 238px;
+			margin-top: 16px;
+			z-index: 100;
+			background: $white;
+		}
+		.footer {
+			height: 140px;
+		}
+	}
+}

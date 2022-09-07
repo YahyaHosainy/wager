@@ -1,0 +1,29 @@
+.SummarySection {
+  font-family: forma-djr-display, sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  color: #ffb200;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__header {
+    font-size: 28px;
+    line-height: 30px;
+    width: 279px;
+    height: 66px;
+    margin-top: 24px;
+    text-align: center;
+    letter-spacing: -0.24px;
+  }
+
+  &__subheader {
+    text-align: center;
+    font-size: 16px;
+    line-height: 19px;
+    width: 279px;
+    height: 76px;
+    margin-top: 18px;
+    text-align: center;
+  }
+}

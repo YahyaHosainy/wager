@@ -1,0 +1,29 @@
+.SelectTeam {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.SelectTeam__Menu {
+  border: 1px solid red;
+  width: 100%;
+  height: 50px;
+}
+
+.SelectTeam__Teams {
+  border: 1px solid red;
+  margin-top: 20px;
+  width: 90%;
+}
+
+.SelectTeam__Explanation {
+  border: 1px solid red;
+  margin-top: 42px;
+  width: 70%;
+  height: 58px;
+}
+
+.SelectTeam__Next {
+  width: 80%;
+  height: 43px;
+}

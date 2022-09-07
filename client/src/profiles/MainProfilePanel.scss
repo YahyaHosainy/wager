@@ -1,0 +1,92 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+.MainProfilePanel {
+  margin-top: 79px;
+  background-color: linear-gradient(0deg, #ffffff, #ffffff), #ffca36;
+}
+
+.MainProfilePanel__container {
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  font-family: "Open Sans", Arial, sans-serif;
+  min-height: 100vh;
+  color: #262626;
+  padding-bottom: 3rem;
+  @media screen and (max-width: 576px) {
+    padding: 0 1rem;
+  }
+}
+
+.MainProfilePanel__btn {
+  display: inline-block;
+  font: inherit;
+  background: none;
+  border: none;
+  color: inherit;
+  padding: 0;
+  cursor: pointer;
+}
+
+.MainProfilePanel_load-more-btn {
+  background: linear-gradient(0deg, #ffca36, #ffca36);
+  border-radius: 10px;
+  max-width: 420px;
+  height: 45px;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.MainProfilePanel_load-more-btn-text {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #000000;
+}
+
+.MainProfilePanel__btn:focus {
+  outline: 0.5rem auto #4d90fe;
+}
+
+.MainProfilePanel__visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.wagersTab__container {
+  margin-top: 1.5rem;
+  display: flex;
+}
+
+.wagersTab__heading {
+  text-align: left;
+  padding-bottom: 4px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+  border-bottom: 1px solid #e1e1dd;
+  flex: 1;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.wagersTab__active {
+  border-bottom: 1px solid #000000;
+}

@@ -1,0 +1,84 @@
+
+@import "../theme/mixins.scss";
+
+.PaypalButtons__amount {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid #616161;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.PaypalButtons__subtitle {
+  color: #7d7d7d;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.PaypalButtons__subtitle-amount {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: right;
+  color: #333333;
+}
+
+.PaypalButtons__input-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-right: -15px; // offsets the incrementer
+
+  input {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    outline: none;
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 24px;
+    text-align: right;
+    background: transparent;
+    color: #000000;
+    -webkit-transition: border-bottom 0.5s;
+    -moz-transition: border-bottom 0.5s;
+    -ms-transition: border-bottom 0.5s;
+    -o-transition: border-bottom 0.5s;
+    transition: border-bottom 0.5s;
+    font-weight: bold;
+    &::placeholder {
+      color: #cccccc;
+    }
+    &:focus {
+      border-color: #ffca36;
+    }
+  }
+}
+
+.PaypalButtons__fees {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.PaypalButtons__subtitle {
+  white-space: nowrap;
+  padding: 15px 0px;
+}
+
+.PaypalButton__success-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $space-small;
+}
+
+.PaypalButton__success-gif {
+  width: 100%;
+}

@@ -1,0 +1,60 @@
+.HeroSection {
+  @include typography($font-weight-heavy);
+  color: $color-white-secondary;
+
+  &__Header {
+    font-size: $font-size-xlarge;
+    line-height: 38px;
+  }
+
+  &__subHeader {
+    line-height: 28px;
+    font-size: $font-size-large;
+    font-weight: $font-weight-light;
+  }
+}
+
+.ExplanationSection {
+  @include typography($font-weight-heavy);
+  color: $color-black-primary;
+  font-size: $font-size-xlarge;
+
+  &__Header {
+    text-align: center;
+    letter-spacing: -0.24px;
+    line-height: 30px;
+  }
+
+  &__step-header {
+    line-height: 30px;
+  }
+
+  &__step-subheader {
+    font-weight: $font-weight-medium;
+    font-size: $font-size-large-med;
+    line-height: 24px;
+  }
+}
+
+.FriendsSection__Header {
+  @include typography;
+  color: $color-white-primary;
+  font-size: $font-size-large-med;
+  line-height: 24px;
+}
+
+.SummarySection {
+  @include typography($font-weight-heavy);
+  color: $color-yellow-tertiary;
+
+  &__Header {
+    font-size: $font-size-large;
+    line-height: 30px;
+  }
+
+  &__subheader {
+    text-align: center;
+    font-size: $font-size-medium;
+    line-height: 19px;
+  }
+}

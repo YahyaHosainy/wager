@@ -1,0 +1,23 @@
+# Stage 1 Build -- Install deps and build react site
+FROM node:15.7.0-alpine as build
+
+WORKDIR /app
+
+COPY yarn.lock package.json ./
+
+RUN yarn install --frozen-lockfile
+
+COPY . /app
+
+RUN yarn build
+
+# Stage 2 Build -- Copy built site to nginx html directory and copy over nginx config
+FROM nginx:1.18-alpine
+
+COPY --from=build /app/build /usr/share/nginx/html
+
+COPY nginx/nginx.conf /etc/nginx/conf.d
+
+EXPOSE 3000
+
+CMD ["nginx", "-g", "daemon off;"]

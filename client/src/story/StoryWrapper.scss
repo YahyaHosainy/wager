@@ -1,0 +1,29 @@
+@import "../theme/mixins.scss";
+
+.StoriesWrapper{
+  display: flex;
+  flex-direction: column;
+  background: #111;
+  position: relative;
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+
+  @include respond-above(small) {
+    width: 320px;
+    height: 640px;
+  }
+}
+
+.StoriesWrapper--overlay {
+  position: absolute;
+  height: inherit;
+  width: inherit;
+  display: flex;
+  pointer-events:unset;
+  margin: auto;
+}
+
+.StoriesModal--like-filled {
+  filter: invert(37%) sepia(89%) saturate(1967%) hue-rotate(330deg) brightness(97%) contrast(85%);
+}

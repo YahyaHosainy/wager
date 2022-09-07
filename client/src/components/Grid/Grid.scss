@@ -1,0 +1,125 @@
+@import "../../theme/mixins.scss";
+// Grid
+$grid-columns: 12;
+$grid-gutter: 15px;
+$grid-gutter-sm: 7px;
+
+.container {
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: auto;
+  margin-left: auto;
+
+  &--with-divider {
+    border-top: 1px solid #D3D3D3;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    &:first-of-type {
+      border-top: initial;
+    }
+  }
+}
+
+.row {
+  &--full-width {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -$grid-gutter;
+  margin-left: -$grid-gutter;
+  margin-bottom: $grid-gutter;
+
+  .col,
+  [class^="col-"],
+  [class*=" col-"] {
+    width: 100%;
+    min-height: 1px;
+    padding-right: $grid-gutter-sm;
+    padding-left: $grid-gutter-sm;
+  }
+
+  .col {
+    flex-basis: auto;
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+
+  @for $i from 1 through $grid-columns {
+    .col-#{$i} {
+      max-width: percentage($i/$grid-columns);
+      flex: 0 0 percentage($i/$grid-columns);
+    }
+
+    .offset-#{$i} {
+      @if $i == 0 {
+        margin-left: 0;
+      } @else {
+        margin-left: percentage($i/$grid-columns);
+      }
+    }
+
+    .order-#{$i} {
+      order: $i;
+    }
+  }
+
+  @each $name, $size in $breakpoints {
+    @media only screen and (min-width: $size) {
+      .col-#{$name} {
+        flex-basis: auto;
+        flex-basis: 0;
+        flex-grow: 1;
+      }
+
+      @for $i from 1 through $grid-columns {
+        .col-#{$name}-#{$i} {
+          max-width: percentage($i/$grid-columns);
+          flex: 0 0 percentage($i/$grid-columns);
+        }
+
+        .offset-#{$name}-#{$i} {
+          @if $i == 0 {
+            margin-left: 0;
+          } @else {
+            margin-left: percentage($i/$grid-columns);
+          }
+        }
+
+        .order-#{$name}-#{$i} {
+          order: $i;
+        }
+        .order-#{$name}-auto {
+          order: unset;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: map-get($breakpoints, "sm")) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media only screen and (min-width: map-get($breakpoints, "md")) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media only screen and (min-width: map-get($breakpoints, "lg")) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media only screen and (min-width: map-get($breakpoints, "xl")) {
+  .container {
+    max-width: 1130px;
+  }
+}

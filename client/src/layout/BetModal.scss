@@ -1,0 +1,524 @@
+@import "../theme/mixins.scss";
+
+.modal {
+  z-index: 2;
+  top: 79px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+}
+
+.modal-main {
+  position: absolute;
+  z-index: 1;
+  background: white;
+  width: 100%;
+  max-width: 500px;
+  height: calc(100vh - 79px);
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+}
+
+.BetModal__label {
+  display: flex;
+  flex: row;
+  font-weight: bold;
+}
+
+.BetModal__input {
+  margin-left: 10px;
+  font-weight: 400;
+}
+
+.BetModal__Contents {
+  position: relative;
+  width: 90%;
+}
+
+.BetModal__closeButton {
+  position: absolute;
+  cursor: pointer;
+  right: 0px;
+  top: 0px;
+  height: 30px;
+  width: 30px;
+}
+
+.SelectTeam {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.SelectTeam__Menu {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.SelectTeam__back {
+  height: 15px;
+  width: 15px;
+}
+
+.SelectTeam__Back-button {
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  margin-left: 14px;
+}
+
+.SelectTeam__Title {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.SelectTeam__Teams {
+  border: 1px solid #f3f3f0;
+  margin-top: 20px;
+  width: 90%;
+  height: 250px;
+  display: flex;
+  flex-direction: row;
+}
+
+.SelectTeam__Team {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.SelectTeam__Team-logo-image {
+  margin-top: 29px;
+  height: 50px;
+}
+
+.SelectTeam__Team-title {
+  margin-top: 8px;
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.SelectTeam__Team-subtitle {
+  margin-top: 4px;
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.SelectTeam__box-container {
+  padding: 10px 0 8px;
+  width: 70px;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.SelectTeam__line-box {
+  padding-top: 3px;
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  color: $color-black-primary;
+}
+
+.SelectTeam__Team-explanation {
+  width: 66%;
+  height: 24px;
+  margin-top: 11.5px;
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.SelectTeam__Team-checkmark {
+  width: 28px;
+  height: 28px;
+  margin-top: 21px;
+}
+
+.SelectTeam__Explanation {
+  width: 70%;
+  height: 80px;
+  margin-top: 10px;
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.SelectTeam__Next {
+  position: absolute;
+  transform: translate(-50%, 0);
+  bottom: 150px;
+  left: 50%;
+  width: 80%;
+  height: 43px;
+  background: #fdd063;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  align-self: flex-start;
+}
+
+.SelectTeam__Close {
+  position: absolute;
+  width: 80%;
+  background: none;
+  text-transform: uppercase;
+  color: $color-red;
+  z-index: 1;
+  text-align: right;
+  right: 10px;
+  margin-top: 10px;
+  outline: none;
+}
+
+.SelectTeam__Close-x {
+  display: inline-block;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+
+.modal__control-container {
+  margin-top: 30%;
+  left: 50%;
+  transform: translate(0, -50%);
+  height: 50px;
+  width: 305px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Congrats__GameOn {
+  margin-top: 42px;
+  width: 70%;
+  height: 58px;
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 37px;
+}
+
+.Congrats__team-img {
+  position: relative;
+  width: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Congrats__team-teamName {
+  position: relative;
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.Congrats__Explanation {
+  position: relative;
+  width: 315px;
+}
+
+.Congrats__betInfo {
+  position: relative;
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.Congrats__wait {
+  position: relative;
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+}
+
+.gif {
+  position: absolute;
+}
+
+.headerCongrats {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin-top: 20px;
+  p {
+    flex: 1;
+    &:last-child {
+      text-align: -webkit-right;
+    }
+  }
+}
+
+.ticketContainer {
+  font-family: $abel;
+}
+
+.teamName {
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.teamSpacing {
+  letter-spacing: .05em;
+}
+
+.imageLine {
+  width: 80%;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+  }
+  h1 {
+    padding: 20px;
+    background: #47c07b;
+    border-radius: 5px;
+    color: white;
+    font-size: 30px;
+  }
+  .line {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    div {
+      margin-top: 20px;
+    }
+  }
+  .userImageTkt {
+    h2 {
+      margin-top: 10px;
+      font-weight: normal;
+      font-size: 20px;
+    }
+  }
+}
+
+.amountSection {
+  width: 80%;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  margin-top: 20px;
+  div {
+    flex: 1;
+    h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-weight: normal;
+    }
+  }
+}
+
+.celebration {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  p {
+    margin: 0 10px;
+    color: rgba($color: #000000, $alpha: 0.8);
+  }
+}
+
+.celeFooter {
+  margin-top: 30px;
+  color: rgba($color: #000000, $alpha: 0.8);
+  font-size: 14px;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+.lineNew {
+  margin-top: 25px;
+  h1 {
+    padding: 30px 20px;
+  }
+}
+
+.lineNew .lineBig {
+  h2 {
+    margin-top: 20px;
+  }
+}
+
+.headerLogoOnly {
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.celeNew {
+  margin-top: 30px;
+}
+
+.modal-main-noscroll {
+  overflow: unset;
+}
+
+.SocialReferral__action-container {
+  display: flex;
+  margin: 16px 0;
+  justify-content: center;
+}
+
+.SocialReferral__link {
+  width: 315px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border-width: 1px;
+  margin-right: 6px;
+}
+
+.SocialReferral__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  cursor: pointer;
+  text-decoration: none;
+  width: 130px;
+  height: 40px;
+  border-radius: 5px;
+  background: linear-gradient(0deg,#ffca36,#ffca36),linear-gradient(0deg,#fdd063,#fdd063),#f2c94c;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.SocialReferral__modes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+.SocialReferral__mode {
+  margin-right: 24px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.SocialReferral__icon {
+  width: 48px;
+  height: 48px;
+}
+
+.modalPopup {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  position: absolute;
+  background: white;
+  width: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  padding: 36px;
+  box-shadow: 0 2px 4px 0 rgb(50 50 93 / 10%);
+  @include respond-below(small) {
+    width: 300px;
+  }
+}
+
+.closeModal {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  img {
+    width: 30px;
+  }
+}
+
+.Referral__btn {
+  @include respond-below(small) {
+    padding: 0 10px;
+  }
+}
+
+.Referral__input {
+  @include respond-below(small) {
+    width: auto;
+  }
+}
+
+.ticketLogo {
+  width: 68px;
+  height: auto;
+}
+
+.celeImg {
+  width: 50px;
+  height: auto;
+}
+
+.shareImg {
+  width: 61px;
+  height: auto;
+}

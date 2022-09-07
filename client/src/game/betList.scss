@@ -1,0 +1,62 @@
+.GameDetail__teams-details {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  .DashboardCard__bg {
+    width: 100px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+  }
+}
+
+.GameDetail__teams-details1 {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  margin-right: 50px;
+  h4 {
+    text-align: left;
+  }
+}
+.GameDetail__teams-details3 {
+  flex: 1;
+  text-align: left;
+}
+.bettors {
+  width: 350px;
+  text-align: left;
+  @media screen and (max-width: 499px) {
+    width: 90%;
+  }
+  .betList, .followersList {
+    height: 100%;
+  }
+  h2 {
+    margin: 20px 0;
+  }
+  .singleList {
+    margin-bottom: 20px;
+    color: black;
+  }
+  .Bettor__friends-pic {
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    margin-right: 5%;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  h4 {
+    display: inline-block;
+  }
+}
+
+.singlebet {
+  color: black;
+  margin-bottom: 10px;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
